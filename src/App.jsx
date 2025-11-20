@@ -5,7 +5,7 @@ import './App.css'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import HomePage from "./pages/homePage"
 import About from "./pages/About"
-import NY from "./destinations/ny";
+import DestinationRouter from "./DestinationRouter.jsx";
 
 
 
@@ -30,8 +30,7 @@ function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/about" element={<About />} />
-        <Route path="/ny" element={<NY />} />
-
+        <Route path="/destination/:id" element={<DestinationRouter />} />
       </Routes>
     </HashRouter>
   );

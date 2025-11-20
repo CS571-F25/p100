@@ -38,7 +38,7 @@ const randomColor =
           />
         ` : ''}
         <button 
-          onclick="window.location.hash = '/ny'"
+          onclick="window.location.hash = '/destination/${doc.id}'"
           style="
             width: 100%;
             padding: 8px;
