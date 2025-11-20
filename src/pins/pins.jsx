@@ -7,6 +7,17 @@ export async function loadPins(map) {
 
   snapshot.forEach((doc) => {
     const data = doc.data();
+    const PIN_COLORS = [
+  "#ff8fa3", // pink
+  "#ffb3c6",
+  "#ffc8dd",
+  "#a3c4f3",
+  "#90dbf4",
+  "#8eecf5",
+  "#b9fbc0"
+];
+const randomColor =
+      PIN_COLORS[Math.floor(Math.random() * PIN_COLORS.length)];
     
     console.log("Loading pin:", data);
 
@@ -46,7 +57,7 @@ export async function loadPins(map) {
       </div>
     `;
 
-    new mapboxgl.Marker({ color: "#ff8fa3" })
+    new mapboxgl.Marker({ color: randomColor })
       .setLngLat([data.lng, data.lat])
       .setPopup(
         new mapboxgl.Popup({ 

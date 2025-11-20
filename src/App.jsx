@@ -17,12 +17,12 @@ function App() {
       <Navbar style = {{background: "linear-gradient(90deg, #ff9a9e, #fad0c4)",}} variant="dark" expand="lg" fixed="top">
         <Container fluid>
           <Navbar.Brand  style={{
-    fontFamily: "'Pacifico', cursive",
+    fontFamily: "'Dancing Script', cursive",
     color: "black", fontSize : 36, textAlign:'center'
   }} href="#" className="fw-bold fs-4">Journeyly</Navbar.Brand>
           <Nav className="ms-auto">
-            <Nav.Link as={Link} to="/" className="fs-5" style={{ fontFamily: "'Pacifico', cursive",color: 'black'}}>Home</Nav.Link>
-            <Nav.Link as={Link} to="/about" className="fs-5" style={{ fontFamily: "'Pacifico', cursive",color: 'black'}}>About</Nav.Link>
+            <Nav.Link as={Link} to="/" className="fs-5" style={{ fontFamily: "'Dancing Script', cursive",color: 'black'}}>Home</Nav.Link>
+            <Nav.Link as={Link} to="/about" className="fs-5" style={{ fontFamily: "'Dancing Script', cursive",color: 'black'}}>About</Nav.Link>
           </Nav>
         </Container>
       </Navbar>

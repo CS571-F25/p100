@@ -31,7 +31,7 @@ function About() {
       }}>
 
         <h1 style={{ 
-          fontFamily: "'Pacifico', cursive",
+          fontFamily: "'Dancing Script', cursive",
           color: 'black',
           textAlign: 'center' 
         }}>
@@ -65,7 +65,7 @@ function About() {
 
           {/* 右边文字 */}
           <p style={{ 
-            fontFamily: "'Pacifico', cursive",
+            fontFamily: "'Dancing Script', cursive",
             fontSize: "20px",
             lineHeight: "1.6",
             maxWidth: "500px",
@@ -107,7 +107,7 @@ function About() {
           </button>
 
           <span style={{
-            fontFamily: "'Pacifico', cursive",
+            fontFamily: "'Dancing Script', cursive",
             fontSize: "20px",
             color: "#333"
           }}>

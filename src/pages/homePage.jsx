@@ -10,6 +10,7 @@ import { loadPins } from "../pins/pins";
 mapboxgl.accessToken = "pk.eyJ1IjoiZW1tYTY2NjY2NjYiLCJhIjoiY21pNmZmbXYxMGFlbTJscHpnbDl2cHcxaiJ9.2U4UX-jcL3WTRjJUN8jBqA";
 
 
+
 function HomePage() {
     const mapContainerRef = useRef(null);
     const mapRef = useRef(null);
@@ -82,13 +83,13 @@ function HomePage() {
       padding: "20px"
     }}>
       <h1 style={{ 
-        fontFamily: "'Pacifico', cursive",
+        fontFamily: "'Dancing Script', cursive",
         color: 'black',
         textAlign: 'center' 
       }}>
-        Welcome to Journely!
+        Welcome to Journeyly!
       </h1>
-      <p style={{ fontFamily: "'Pacifico',cursive", textAlign: 'center' }}>Every pin is a tiny piece of your story.
+      <p style={{ fontWeight :20, fontFamily: "'Dancing Script',cursive", textAlign: 'center' }}>Every pin is a tiny piece of your story.
 Start adding them and watch your Journeyly map fill with color,
 adventure, and all the places that shaped you.</p>
       
