@@ -5,7 +5,7 @@ export default function HighlightsList({ highlights }) {
       marginBottom: "40px"
     }}>
       <h2 style={{
-        fontFamily: "'Pacifico', cursive",
+        fontFamily: "'Caveat', cursive",
         textAlign: "center",
         marginBottom: "30px",
         color: "#333"
@@ -36,7 +36,7 @@ export default function HighlightsList({ highlights }) {
               {item.emoji}
             </div>
             <h3 style={{
-              fontFamily: "'Pacifico', cursive",
+              fontFamily: "'Caveat', cursive",
               fontSize: "20px",
               marginBottom: "10px",
               color: "#333"

@@ -1,18 +1,35 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Container } from "react-bootstrap";
 
 function About() {
-  const [likes, setLikes] = useState(0);
-  const [liked, setLiked] = useState(false);
+
+  // 从 localStorage 取数据
+  const [likes, setLikes] = useState(() => {
+    return Number(localStorage.getItem("aboutLikes")) || 0;
+  });
+
+  const [liked, setLiked] = useState(() => {
+    return localStorage.getItem("aboutLiked") === "true";
+  });
 
   function handleLike() {
+    let newLikes = likes;
+    let newLiked = liked;
+
     if (liked) {
-      setLikes(likes - 1);
-      setLiked(false);
+      newLikes = likes - 1;
+      newLiked = false;
     } else {
-      setLikes(likes + 1);
-      setLiked(true);
+      newLikes = likes + 1;
+      newLiked = true;
     }
+
+    setLikes(newLikes);
+    setLiked(newLiked);
+
+    // 保存到 localStorage
+    localStorage.setItem("aboutLikes", newLikes);
+    localStorage.setItem("aboutLiked", newLiked);
   }
 
   return (
@@ -24,11 +41,7 @@ function About() {
       justifyContent: "center",
       background: "linear-gradient(to bottom, #ffffffff, #fcd9d9ff)" 
     }}>
-      <Container style={{ 
-        width: "100%",
-        maxWidth: "100%",  
-        padding: "20px"
-      }}>
+      <Container style={{ width: "100%", maxWidth: "100%", padding: "20px" }}>
 
         <h1 style={{ 
           fontFamily: "'Dancing Script', cursive",
@@ -38,7 +51,6 @@ function About() {
           About Me
         </h1>
 
-        {/* --- 布局 --- */}
         <div style={{
           display: "flex",
           flexDirection: "row",
@@ -50,7 +62,6 @@ function About() {
           flexWrap: "wrap"
         }}>
           
-          {/* 左边照片 */}
           <img 
             src="https://i.ibb.co/7xytZVLR/IMG-7075.jpg"   
             alt="Emma"
@@ -63,9 +74,8 @@ function About() {
             }}
           />
 
-          {/* 右边文字 */}
           <p style={{ 
-            fontFamily: "'Dancing Script', cursive",
+            fontFamily: "'Courgette', cursive",
             fontSize: "20px",
             lineHeight: "1.6",
             maxWidth: "500px",

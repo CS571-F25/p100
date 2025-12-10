@@ -9,6 +9,8 @@ import PhotoGallery from "../components/PhotoGallery";
 import StorySection from "../components/StorySection";
 import HighlightsList from "../components/HighlightsList";
 import TravelTips from "../components/TravelTips";
+import LikeButton from "../components/LikeButton";
+import Comments from "../components/Comments";
 
 export default function Destination() {
   const { id } = useParams();
@@ -18,10 +20,13 @@ export default function Destination() {
   // 映射：URL里的id → Firebase里的destinationId
   const ID_MAP = {
     ny: "nyc",
-    ca: "los-angeles",
-    sd: "san-diego",
-    chi: "chicago",
+    ca: "la",
+    sd: "sd",
+    chi: "chi",
     sf: "san-francisco",
+    anc:"anc",
+    wisc:"wisc",
+    apt:"apt"
     // 以后添加新城市，只在这里加一行
   };
 
@@ -85,14 +90,14 @@ export default function Destination() {
             color: "#333",
             marginBottom: "20px"
           }}>
-            Destination not found 😢
+            Destination is coming!
           </h1>
           <p style={{
             fontFamily: "'Dancing Script', cursive",
             fontSize: "20px",
             color: "#666"
           }}>
-            We couldn't find this destination in our database.
+            I'm still working on it!.
           </p>
         </div>
       </div>
@@ -150,6 +155,12 @@ export default function Destination() {
         {data.tips && data.tips.length > 0 && (
           <TravelTips tips={data.tips} />
         )}
+
+        {/* Like Button */}
+        <LikeButton destinationId={ID_MAP[id] || id} />
+
+        {/* Comments Section */}
+        <Comments destinationId={ID_MAP[id] || id} />
 
       </Container>
     </div>

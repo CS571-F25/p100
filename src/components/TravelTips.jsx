@@ -30,7 +30,7 @@ export default function TravelTips({ tips }) {
             borderLeft: "4px solid #ff8fa3"
           }}>
             <p style={{
-              fontFamily: "'Dancing Script', cursive",
+              fontFamily: "'Courgette', cursive",
               fontSize: "17px",
               color: "#333",
               margin: 0

@@ -169,7 +169,7 @@ function HomePage() {
         </h1>
         <p style={{ 
           fontWeight: 20, 
-          fontFamily: "'Dancing Script',cursive", 
+          fontFamily: "'Courgette', cursive",
           textAlign: 'center' 
         }}>
           Every pin is a tiny piece of your story.
