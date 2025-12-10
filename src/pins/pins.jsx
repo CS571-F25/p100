@@ -21,7 +21,6 @@ const randomColor =
     
     console.log("Loading pin:", data);
 
-    // ⭐ 直接写 HTML 字符串
     const popupHTML = `
       <div style="padding: 10px; width: 220px; font-family: 'Pacifico', cursive; background-color: #fff;">
         <h4 style="margin: 0 0 8px 0; font-size: 18px; font-weight: bold; color: #333;">
