@@ -44,7 +44,7 @@ export default function HighlightsList({ highlights }) {
               {item.title}
             </h3>
             <p style={{
-              fontFamily: "'Dancing Script', cursive",
+              fontFamily: "'Caveat', cursive",
               fontSize: "16px",
               color: "#666",
               margin: 0

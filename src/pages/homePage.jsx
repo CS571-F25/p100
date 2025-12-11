@@ -179,9 +179,9 @@ function HomePage() {
 
         {!user && (
           <p style={{
-            fontFamily: "'Dancing Script', cursive",
+            fontFamily: "'Caveat', cursive",
             textAlign: 'center',
-            color: '#ff8fa3',
+            color: '#ff3c5fff',
             fontSize: '18px',
             marginTop: '10px'
           }}>
